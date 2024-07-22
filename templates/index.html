@@ -1,0 +1,80 @@
+{% extends 'shablon.html' %}
+
+{% block title %}
+    Шамбала Турс
+{% endblock %}
+
+{% block content %}
+<!--Баннер-->
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-12">
+            <div class="banner">
+                <img src="../static/image/layer_1_1366x546px.png" alt="Layer 1" class="layer1">
+                <img src="../static/image/layer_2_1_1366x546px.png" alt="Layer 2_1" class="layer2_1">
+                <img src="../static/image/layer_2_2_1366x546px.png" alt="Layer 2_2" class="layer2_2">
+                <img src="../static/image/layer_3_1366x546px.png" alt="Layer 3" class="layer3">
+                <div class="text">Горные туры  - Путь к Шамбала</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Конец Баннер-->
+ <!-- Карточки товаров -->
+<div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../static/image/tibet.png" class="card-img-top" alt="Товар 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Тур в Непал</h5>
+                        <p class="card-text">Описание товара 1.</p>
+                        <a href="#" class="btn btn-primary">{{link}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../static/image/kamchatka.png" class="card-img-top" alt="Товар 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Тур на Камчатку</h5>
+                        <p class="card-text">Описание товара 2.</p>
+                        <a href="#" class="btn btn-primary">{{link}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../static/image/tibet2.png" class="card-img-top" alt="Товар 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Тур на Тибет</h5>
+                        <p class="card-text">Описание товара 3.</p>
+                        <a href="#" class="btn btn-primary">{{link}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+ <!-- Конец Карточки товаров -->
+<!-- Форма обратной связи -->
+<div class="container mt-5">
+        <h2>Форма обратной связи</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Введите ваш email">
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Введите ваше сообщение"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+</div>
+<!-- Конец Форма обратной связи -->
+
+{% endblock %}
