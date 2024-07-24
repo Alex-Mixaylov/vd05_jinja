@@ -1,0 +1,46 @@
+{% extends 'shablon.html' %}
+
+{% block title %}
+    Дом задание VD06
+{% endblock %}
+
+{% block content %}
+<div class="container">
+        <h1 class="my-4">Анкета</h1>
+        <form action="/dz01_vd06/" method="POST" id="survey-form">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Возраст:</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="city">Город:</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="hobby">Хобби:</label>
+                <input type="text" class="form-control" id="hobby" name="hobby" required>
+            </div>
+            <button type="submit" class="btn btn-primary">{{ link }}</button>
+        </form>
+        <h2 class="my-4">Карточки пользователей</h2>
+        <div id="cards-container" class="row">
+            {% for post in posts %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.name }}</h5>
+                            <p class="card-text"><strong>Возраст:</strong> {{ post.age }}</p>
+                            <p class="card-text"><strong>Город:</strong> {{ post.city }}</p>
+                            <p class="card-text"><strong>Хобби:</strong> {{ post.hobby }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+</div>
+
+{% endblock %}
