@@ -20,15 +20,12 @@ def contacts():
 
 @app.route("/blog/", methods=["GET", "POST"])
 def index():
+    contex = {
+        "link": "Опубликовать пост"
+    }
     if request.method =='POST':
         title = request.form.get('title')
         content = request.form.get('content')
         if title and content:
             posts.append({'title': title, 'content': content})
-    return render_template('blog.html', posts=posts)
-
-def blog():
-    contex = {
-        "link": "Опубликовать пост"
-    }
-    return render_template("blog.html", **contex)
+    return render_template('blog.html', posts=posts, **contex)
